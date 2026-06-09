@@ -24,8 +24,10 @@ class Server {
     */
 
     // manejo de errores
-    this.app.use((req, res, next) => {
-      return res.status(400).json({ msg: 'Error.' })
+    this.app.use((req, res) => {
+      return res.status(404).json({
+        msg: 'Página no encontrada'
+      })
     })
     this.app.use((err, req, res, next) => {
       console.error(err.stack)

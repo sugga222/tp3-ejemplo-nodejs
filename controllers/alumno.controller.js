@@ -35,11 +35,7 @@ const getAlumnoById = async (req, res) => {
   } catch (error) {
     console.log(error)
     return res.status(500).json({
-<<<<<<< HEAD
-      error: 'No se pudo obtener el datalle del alumno con legajo n° {legajo}'
-=======
       error: `No se pudo obtener el detalle del alumno con legajo n° ${legajo}`
->>>>>>> origin/manuel
     })
   }
 }
